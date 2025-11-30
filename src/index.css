@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply antialiased text-white bg-dark-900;
+  /* 隐藏滚动条但允许滚动 (可选) */
+  scrollbar-width: none; 
+}
