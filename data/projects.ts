@@ -3,11 +3,11 @@ import { Zap, Code, Database } from 'lucide-react';
 export const projects = [
   {
     id: 1,
-    title: "JSON 格式化专家",
-    desc: "极致轻量的 JSON 解析与美化工具，支持错误定位与一键复制。",
+    title: "通用 AI 交易操作系统",
+    desc: "从加密市场到全资产类别。多智能体决策 · 统一风控 · 低延迟执行。",
     icon: Code, // 使用 Lucide 图标组件
-    tags: ["DevTool", "React"],
-    link: "https://google.com", // 替换你的真实链接
+    tags: ["Go","Gin","React","Vite", "TailwindCss"],
+    link: "/nofzg", // 替换你的真实链接
     color: "from-blue-500 to-cyan-400" // 专属流光色
   },
   {

@@ -1,37 +1,41 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Zap, Code, Database, Github, Twitter, Mail, ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Zap, BadgeDollarSign,Bot, Database,Github, Twitter, Mail, ArrowUpRight } from 'lucide-react';
+//import { projects } from '../data/projects.ts';
+
 
 // --- 数据 ---
 const projects = [
   {
     id: 1,
-    title: "JSON 格式化专家",
-    desc: "极致轻量的 JSON 解析与美化工具，支持错误定位与一键复制。",
-    icon: Code, 
-    tags: ["DevTool", "React"],
-    link: "https://google.com", 
+    title: "通用 AI 交易操作系统",
+    desc: "从加密市场到全资产类别。多智能体决策 · 统一风控 · 低延迟执行。",
+    icon: Bot, 
+    tags: ["Go","Gin","React","Vite", "TailwindCss"],
+    link: "/nofzg", 
     color: "from-blue-500 to-cyan-400" 
   },
   {
     id: 2,
-    title: "正则测试实验室",
-    desc: "可视化正则表达式匹配过程，内置常用正则库，开发者必备。",
+    title: "Polymarket策略套利框架",
+    desc: "API框架化，降低开发门槛，让每个人都能轻松将自己的策略自动化。",
     icon: Zap,
-    tags: ["Regex", "Utility"],
-    link: "https://google.com",
+    tags: ["Python", "Js"],
+    link: "#",
     color: "from-purple-500 to-pink-400"
   },
   {
     id: 3,
-    title: "Base64 转换器",
-    desc: "图片、文本与 Base64 编码的极速互转，本地处理保护隐私。",
+    title: "更多有趣开发，敬请期待...",
+    desc: "致力于一切有趣的技术，致富的策略，自动化思路",
     icon: Database,
     tags: ["Privacy", "Encoder"],
-    link: "https://google.com",
+    link: "#",
     color: "from-emerald-400 to-green-500"
   }
 ];
+
 
 // --- 组件：打字机效果 ---
 const Typewriter = ({ text, delay = 100, infinite = true }) => {
@@ -87,10 +91,8 @@ const SpotlightCard = ({ project, index }) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="relative w-full"
     >
-      <a 
-        href={project.link} 
-        target="_blank" 
-        rel="noopener noreferrer"
+      <Link 
+        to={project.link} 
         className="block relative h-full overflow-hidden rounded-xl border border-dark-700 bg-dark-800 p-8 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/10 group"
         onMouseMove={handleMouseMove}
         onMouseEnter={handleFocus}
@@ -129,7 +131,7 @@ const SpotlightCard = ({ project, index }) => {
             ))}
           </div>
         </div>
-      </a>
+      </Link>
     </motion.div>
   );
 };
@@ -181,8 +183,8 @@ function App() {
           {/* 4. 新增：流光社交按钮 */}
           <div className="flex justify-center gap-4 mt-8">
             {[
-              { Icon: Github, href: "#" },
-              { Icon: Twitter, href: "#" },
+              { Icon: Github, href: "https://github.com/GWEZHANG" },
+              { Icon: Twitter, href: "https://x.com/zgw0113" },
               { Icon: Mail, href: "#" }
             ].map((item, i) => (
               <a 
@@ -210,7 +212,7 @@ function App() {
           transition={{ delay: 1, duration: 1 }}
           className="pt-8 pb-10 mt-24 text-sm text-center text-gray-600 border-t border-white/5"
         >
-          <p>Designed for Developers © 2024</p>
+          <p>Designed for Developers © 2025</p>
         </motion.footer>
       </div>
     </div>
