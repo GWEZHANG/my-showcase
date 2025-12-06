@@ -270,7 +270,7 @@ const NofZgPage = () => {
               <div className="absolute transition duration-500 -inset-1 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 opacity-20 blur group-hover:opacity-40"></div>
               <div className="relative flex items-center justify-center w-full overflow-hidden border aspect-video rounded-xl border-white/10 bg-neutral-900">
                 { 
-                   <img src="../public/details-page.png" className="object-cover" />
+                   <img src="/details-page.png" className="object-cover" />
                 }
               </div>
             </div>
